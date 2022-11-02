@@ -81,6 +81,39 @@ nav {
     row-gap: 1rem;
 }
 
+.row{
+    margin: auto;
+    color: #d94c3a;
+    border-radius:30px;
+    border: 50px solid #eddbc3;
+    
+}
+
+
+.card{
+    margin: auto;
+    color: #813a26;
+    border-radius:350px;
+    border: 50px solid #8fb59c;
+} 
+
+.text-center{
+    background-color: #54a992;
+    margin: 10px;
+    padding: 20px;
+    border-radius:10px;
+    color: #eddbc3;
+}
+
+
+.cuenta{
+    background-color: #8fb59c;
+    margin: 10px;
+    padding: 20px;
+    border-radius:10px;
+    color: #813a26;
+}
+
 /*******************************BEBIDAS FRIAS*************************************/
 
 .body_bebidas{
