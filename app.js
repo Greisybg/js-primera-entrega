@@ -2,7 +2,7 @@
 
 //Creo mi carrito como array vacio
 let carrito = [];
-let contado_prouctos=0;
+let contador_productos=0;
 
 
 //Hago la funcion para armar mi muestra de productos a elegir trayendo la data desde un archivo en formato JSON
@@ -42,8 +42,10 @@ traerproductosJson();
 
 //En el siguiente codigo voy armando el carrito mostrando los desayunos seleccionados
 function agregarAlCarrito(productoSeleccionado){
-    carrito.push(productoSeleccionado);//Aqui añado el desayuno seleccionado al carrito
-    contado_prouctos += 1;
+    contador_productos = contador_productos+1;
+    let newProductoSeleccionado = {... productoSeleccionado};
+    newProductoSeleccionado.idItem='producto-item-'+contador_productos;
+    carrito.push(newProductoSeleccionado);//Aqui añado el desayuno seleccionado al carrito
     Swal.fire({
         title: "Desayuno " + productoSeleccionado.nombre,
         text: "agregado a tus pedidos",
@@ -59,21 +61,35 @@ function agregarAlCarrito(productoSeleccionado){
 
 
     document.getElementById("tablabody").innerHTML += `
-    <p>
-    <div id='product-item-${contado_prouctos}'  >
-        <div>${productoSeleccionado.nombre}</div>
-        <div>${productoSeleccionado.precio}</div>
-        <div><a href="#" id='btn-borrar-item${contado_prouctos}'class="btn btn-outline-danger" onclick="eliminarItemCarrito(this)">X</a></div>
-    </div>
-    </p>
+    
+    <tr>
+        <td>${productoSeleccionado.nombre}</td>
+        <td>${productoSeleccionado.precio}</td>
+        <td>
+        <a href="#" id='btn-borrar-item-${contador_productos}'class="btn btn-outline-danger" onclick="eliminarItemCarrito(this)">X</a>
+        </td>
+    </tr>
     `;
 
-    
-let totalCarrito = carrito.reduce((sumador,desayuno)=>sumador+desayuno.precio,0);
-document.getElementById("total").textContent="Total a pagar $: "+totalCarrito;
+    actualizarTotal();
+
 };
 
 
 function eliminarItemCarrito(element){
+    let idItem=element.id.replace('btn-borrar-item-','')
+    let idItemCarrito="producto-item-"+idItem;
+    console.log(carrito);
+    console.log(idItemCarrito);
+    carrito = carrito.filter(function(value, index, arr){ 
+        return value.idItem != idItemCarrito;
+    });
+    console.log(carrito);
     element.parentElement.parentElement.remove();
+    actualizarTotal();
 };
+
+function actualizarTotal(){
+    let totalCarrito = carrito.reduce((sumador,desayuno)=>sumador+desayuno.precio,0);
+    document.getElementById("total").textContent="Total a pagar $: "+totalCarrito;
+}
