@@ -7,6 +7,7 @@ let contador_productos=0;
 
 //Hago la funcion para armar mi muestra de productos a elegir trayendo la data desde un archivo en formato JSON
 function traerproductosJson(ruta){
+    console.log(ruta);
     const DATAJSON=ruta+"productos.json";
     fetch(DATAJSON)
         .then(res => res.json())
