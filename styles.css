@@ -13,21 +13,23 @@
 ******************NAV****************
 *************************************/
 
-
-.nav-enlace{
-    display: inline-block;
+.nav-enlace-registro{
     background: #d94c3a;
     color: white;
     font-family: 'Indie Flower', cursive;
-    font-size: 20px;
+    font-size: 30px;
     padding: 7px 20px;
-    text-decoration: none;
+    margin: 100px;
     border-radius:10px;
-    border: 2px solid #8fb59c;
-
+    list-style-type: none;
 }
-.nav-enlace:hover{
-    background: #e8c571;
+.titulo-index{
+    background: #54a992;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    padding: 7px 20px;
+    border-radius:3px;
 }
 
 nav {
@@ -68,59 +70,30 @@ nav {
 }
 
 
-/*******************************MERIENDAS*************************************/
+/*******************************FORMULARIO REGISTRO*************************************/
 
-.body_meriendas{
-    background-color: #eddbc3;
+.body_form{
+    background-color: #eddbc3a4;
 }
-
-.column-3{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
-}
-
-.row{
-    margin: auto;
-    color: #d94c3a;
-    border-radius:30px;
-    border: 50px solid #eddbc3;
-    
-}
-
-
-.card{
-    margin: auto;
-    color: #813a26;
-    border-radius:350px;
-    border: 50px solid #8fb59c;
-} 
 
 .text-center{
-    background-color: #54a992;
-    margin: 10px;
-    padding: 20px;
-    border-radius:10px;
-    color: #eddbc3;
+    color: white;
+    margin: 1px;
+    padding: 1px;
+}
+
+.product-row{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.product-card{
+    color: #392B27;
+    box-shadow: 1px 1px 1px 1px rgba(55, 43, 58, 0.8);
+    height: 400px;
 }
 
 
-.cuenta{
-    background-color: #8fb59c;
-    margin: 10px;
-    padding: 20px;
-    border-radius:10px;
-    color: #813a26;
-}
-
-/*******************************BEBIDAS FRIAS*************************************/
-
-.body_bebidas{
-    background-color: #8fb59c;
-}
 
 
-/*******************************PICADAS************************************/
-
-/*******************************SIN TACC*************************************/

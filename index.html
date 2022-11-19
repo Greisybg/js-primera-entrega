@@ -21,10 +21,7 @@
         <img class="imgCafe" src="img/taza_cafe-removebg-preview (1).png">
     </header>
     <nav class="encabezado">
-        <a href="categorias/meriendas.html" class="nav-enlace">Desayunos & meriendas</a>
-        <a href="categorias/bebidas_frias.html" class="nav-enlace">Bebidas frías</a>
-        <a href="categorias/picadas.html" class="nav-enlace">Picadas</a>
-        <a href="categorias/sintacc.html" class="nav-enlace">Sin Tacc</a>
+        <h1 class="text-center titulo-index">Desayunos y meriendas para todos los gustos</h1>
     </nav>
 
     <h2 class="pedir"> Pide lo que quieras...</h2>
@@ -33,9 +30,44 @@
         <img class="bondi" src="img/bondi.png">
     </slide>
 
+    <h2 class="pedir"> Te lo llevamos rodando...</h2>
+
+    <div>
+        <div id="misprods" class="row">
+        
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row product-row" id="idDesayunos">
+
+        </div>
+    </div>
+
+
+
+    <div class="cuenta">
+        <h4>Tu pedido:</h4>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="tablabody">
+    
+            </tbody>
+        </table>
+        <h4 id="total"> Total a pagar $:</h4>
+        <a href="paginas/registro.html" class="btn btn-info btn-lg active" role="button" aria-pressed="true">Pagar</a>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../productos.js"></script>
-    <script src="../app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
