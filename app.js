@@ -7,7 +7,7 @@ let contador_productos=0;
 
 //Hago la funcion para armar mi muestra de productos a elegir trayendo la data desde un archivo en formato JSON
 function traerproductosJson(ruta){
-    const DATAJSON=ruta;
+    const DATAJSON=ruta+"productos.json";
     fetch(DATAJSON)
         .then(res => res.json())
         .then(datosDeProductos => {
@@ -16,7 +16,7 @@ function traerproductosJson(ruta){
                 document.getElementById("idDesayunos").innerHTML +=  ` 
                 <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                 <div class="card mb-4 product-card">
-                <img class="card-img-top" src="${desayuno.img}" alt="Card image cap"/>
+                <img class="card-img-top" src="${ruta}${desayuno.img}" alt="Card image cap"/>
                 <div class="card-body">
                     <h5 class="card-title">${desayuno.nombre}</h5>
                     <p class="card-text"> Precio: $ ${desayuno.precio}</p>
